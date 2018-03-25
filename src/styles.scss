@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+@media only screen and (max-width: 600px) {
+        .jumbotron.jumbotron-fluid{
+                font-size:3px;
+                .display-3{
+                 font-size: 2.5rem;
+                }
+        }
+        .buttons-bar{
+             .btn{
+                width:100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                }
+             .search-bar{
+                     margin: auto;
+                     margin-top: 10px;
+             }   
+        }
+
+        #totalTableData, #totalTableHead,#totalTableData1{
+                display: none;
+        }
+        .button-text{
+                display: none;
+        }
+        
+        
+}
+@media print{
+
+}
+
+ html,body{
+        background-color: lightgray
+ }  
+ 
+ form  {
+        .add-button-bar{
+        float: right;
+         margin-bottom: 20px;
+        }
+}
+
+.table-part{
+        margin-top: 20px;
+        position: relative;
+} 
+
+.buttons-bar{
+        margin-top:80px;
+        .btn{
+                background-color: darkslateblue;
+                color: white;
+        }
+        
+        .search-bar{
+                margin-left:100px
+        }
+}
+        
+
+
+.ng-invalid:not(form):not(.ng-untouched)  {
+        border: 2px solid #a94442; /* red */
+      }
+
+.text-muted {
+        color: #6C751E!important;
+    }
+
+ .btn-primary.disabled, .btn-primary:disabled {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+

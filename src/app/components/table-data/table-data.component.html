@@ -1,0 +1,44 @@
+<td [hidden]="!product.editable">
+  <input type="text" [(ngModel)]="product.productName" name="product">
+</td>
+<td [hidden]="!product.editable">
+  <input type="number" [(ngModel)]="product.quantity" name="product">
+</td>
+<td [hidden]="!product.editable">
+  <input type="number" [(ngModel)]="product.price" name="product">
+</td>
+<td [hidden]="!product.editable" id="totalTableData1">
+  New Total:{{product.quantity*product.price | currency:'JPY'}}
+</td>
+
+
+<td [hidden]="product.editable">
+  <label class="checkbox-inline">
+    <input type="checkbox" [checked]="product.purchased" (change)="buyProduct()">
+  </label>
+  {{product.productName}}
+</td>
+<td [hidden]="product.editable">
+  {{product.quantity}}
+</td>
+<td [hidden]="product.editable">
+  {{product.price | currency:'JPY'}}
+</td>
+<td id="totalTableData" [hidden]="product.editable">
+  {{product.quantity*product.price | currency:'JPY'}}
+</td>
+
+<td>
+  <button type="button" class="btn btn-secondary" [hidden]="product.editable" (click)="editThisItem()">
+    <span class="button-text">Edit</span>
+    <i class="fa fa-edit" style="font-size:13px"></i>
+  </button>
+  <button type="button" class="btn btn-secondary" [hidden]="!product.editable" (click)="updateThisItem()">
+    <span class="button-text">Save</span>
+    <i class="fa fa-floppy-o"></i>
+  </button>
+  <button type="button" class="btn btn-danger" (click)="deleteThisItem()">
+    <span class="button-text">Delete</span>
+    <i class="fa fa-trash"></i>
+  </button>
+</td>

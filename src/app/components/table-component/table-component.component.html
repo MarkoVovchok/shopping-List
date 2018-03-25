@@ -1,0 +1,18 @@
+<table class="table table-dark table-striped table-hover .table-responsive-sm">
+    <thead class="thead-light">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price Per Item</th>
+        <th id="totalTableHead">Total For This Purchase</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tr table-data *ngFor="let product of listToShow" [product]="product" (productChanged)="passChangedMessage()">
+      <tr>
+        <tr>
+          <td>
+            Total for this purchase: {{total | currency:'JPY'}}
+          </td>
+        </tr>
+</table>
